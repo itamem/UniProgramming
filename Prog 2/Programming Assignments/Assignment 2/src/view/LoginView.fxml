@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.LoginController" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" styleClass="background" prefHeight="100.0" prefWidth="400.0" spacing="20" >
+        <Separator/>
+        <Label text="Login" styleClass="heading"/>
+        <Separator/>
+<GridPane alignment="CENTER" styleClass="background" prefHeight="200.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1">
+        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="usernameTf" text="" GridPane.columnIndex="1" GridPane.rowIndex="0"/> 
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <PasswordField fx:id="passwordPf" text="" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+</GridPane>
+<HBox alignment="CENTER" prefHeight="250.0" prefWidth="250.0" xmlns:fx="http://javafx.com/fxml/1">
+        <Button prefWidth="1000" fx:id="loginBtn" text="Login" onAction="#handleLogin" styleClass="button"/>
+        <!-- <Separator/> -->
+        <Button prefWidth="1000" fx:id="exitBtn" text="Exit" onAction="#handleExitLogin" styleClass="button"/>
+</HBox>
+<!-- <HBox alignment="BOTTOM_RIGHT" styleClass="button" prefHeight="50.0" prefWidth="50.0" spacing="0" xmlns:fx="http://javafx.com/fxml/1">
+        <Button fx:id="exitBtn" text="Exit" alignment="BOTTOM_RIGHT"/>
+</HBox> -->
+        <stylesheets>
+            <URL value="@style.css"/>
+        </stylesheets>
+</VBox>
