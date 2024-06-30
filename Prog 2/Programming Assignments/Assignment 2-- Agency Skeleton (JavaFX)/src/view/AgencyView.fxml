@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.AgencyController" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" styleClass="background" prefHeight="200.0" prefWidth="800.0" spacing="20">
+     <!-- <Label text="Login"/>    -->
+     <ImageView fx:id="agencyBackgroundImg" />
+     <!-- inser image -->
+     <Separator/>
+<HBox alignment="CENTER" styleClass="heading" prefHeight="250.0" prefWidth="250.0" xmlns:fx="http://javafx.com/fxml/1">
+     <Label text= "${'Hi ' + controller.agency.loggedInUser.name + ', welcome to the Prog2 Travel Agency'}" styleClass="heading" />
+     <!-- <Text fx:id="nameTxt"/> -->
+     <!-- <Label text=/> -->
+
+</HBox>
+     <Separator/>
+
+<HBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
+     <Button prefWidth="400" fx:id="exploreFlightsBtn" text="Explore Flights" onAction="#handleExploreFlights" styleClass="button"/>
+     <Button prefWidth="400" fx:id="exploreDestinationsBtn" text="Explore Destinations" onAction="#handleExploreDestinations" styleClass="button"/>
+     <Button prefWidth="400" fx:id="bookATripBtn" text="Book a Trip" onAction="#handleBookATrip"/>
+     <Button prefWidth="400" fx:id="exitBtn" text="Exit" onAction="#handleExitLogin"/>
+
+</HBox>
+     <stylesheets>
+          <URL value="@style.css"/>
+     </stylesheets>
+</VBox> 
+     <!-- add text "hi name(to be getName of loggedInUser after creating the UI), welcome to Prog2 Travel agency"-->
+     <!-- add speparator -->
+     <!-- add an HBox with the following buttons: "Explore Flights", "Explore Destinations", "Book a Trip", "Exit" -->
+
+<!-- 
+          <Button fx:id="exploreFlightsBtn" text="Explore Flights" onAction="#handleExploreFlights"/>
+          <Button fx:id="exploreDestinationsBtn" text="Explore Destinations" onAction="#handleExploreDestinations"/>
+          <Button fx:id="bookATripBtn" text="Book a Trip" onAction="#handleBook a Trip"/> 
+          <Button fx:id="exitBtn" text="Exit" onAction="#handleExitAgency"/>  -->

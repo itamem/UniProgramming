@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.Flights.ExploreFlightsController" xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" styleClass="background" prefHeight="200.0" prefWidth="600.0" spacing="20">
+    <ImageView fx:id="flightsBackgroundImg" />
+    <Separator/>
+<HBox alignment="CENTER" styleClass="heading" prefHeight="100.0" prefWidth="100.0" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text= "${'Hi ' + controller.flights.agency.loggedInUser.name + ', welcome to the Prog2 Travel Agency'}" styleClass="heading" />  
+</HBox> 
+<!-- ${'Hi ' + controller.agency.loggedInUser.name + ', welcome to the Prog2 Travel Agency'} -->
+    <Separator/>
+<HBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
+     <Button prefWidth="400" fx:id="viewAllFlightsBtn" text="View All Flights" onAction="#handleViewAllFlights" styleClass="button"/>
+     <Button prefWidth="195" fx:id="viewFlightsByCountryBtn" text="View Flights by Country" onAction="#handleViewFlightsByCountry" styleClass="button"/>
+     <Button prefWidth="400" fx:id="addFlightBtn" text="Add Flight" onAction="#handleAddFlight"/>
+     <Button prefWidth="400" fx:id="removeFlightBtn" text="Remove Flight" onAction="#handleRemoveFlight"/>
+     <Button prefWidth="400" fx:id="closeBtn" text="Close" onAction="#handleClose" />
+
+</HBox>
+
+    <stylesheets>
+          <URL value="@style.css"/>
+     </stylesheets>
+</VBox>
