@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?> 
+
+<VBox fx:controller="controller.Destinations.DisplayDestinationsController" alignment="CENTER" styleClass="background" prefHeight="800.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fx:id="destinationsBackgroundImg" />
+<Separator/>
+<HBox alignment="CENTER" styleClass="heading" prefHeight="100.0" prefWidth="100.0" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text= "Filtered Destinations" styleClass="heading" />  
+</HBox>
+<Separator/>
+<HBox alignment="CENTER" styleClass="label" prefHeight="100.0" prefWidth="100.0" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text= "Country" styleClass="label" />  
+</HBox>
+<HBox alignment="CENTER" styleClass="label" prefHeight="100.0" prefWidth="1000.0">
+    <TextField fx:id="countrySearchTf" prefWidth="1700"/>  
+</HBox>
+<TableView fx:id="destinationsTv" prefHeight="1000">
+    <columns>
+        <TableColumn text="Name">
+            <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+        <TableColumn text="Country">
+        <cellValueFactory><PropertyValueFactory property="country"/></cellValueFactory>
+            </TableColumn>
+    </columns>
+</TableView>
+<HBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1">
+     <Button fx:id="closeBtn" prefWidth="2000" text="Close" onAction="#handleDestinationsByCountryClose" />
+</HBox>
+    <stylesheets>
+          <URL value="@style.css"/>
+     </stylesheets>       
+</VBox>

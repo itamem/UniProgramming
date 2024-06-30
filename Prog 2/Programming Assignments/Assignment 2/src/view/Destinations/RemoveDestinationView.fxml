@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.Destinations.ModifyDestinationsController" alignment="CENTER" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fx:id="destinationsBackgroundImg" />
+<Separator/>
+<HBox alignment="CENTER" styleClass="heading" prefHeight="100.0" prefWidth="100.0" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text= "Remove a Destination" styleClass="heading" />  
+</HBox>
+<Separator/>
+<GridPane alignment="CENTER" styleClass="background" prefHeight="200.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1">
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="removeNameofDestinatonTf" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Country:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="removeCountryTf" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+</GridPane>
+<HBox alignment="CENTER" prefHeight="250.0" prefWidth="250.0" xmlns:fx="http://javafx.com/fxml/1">
+        <Button prefWidth="1000" fx:id="removeDestinationBtn" text="Remove Destination" onAction="#handleRemoveDestination" styleClass="button"/>
+        <Button prefWidth="1000" fx:id="closeRemoveDestinationBtn" text="Close" onAction="#handleCloseRemoveDestinations" styleClass="button"/>
+</HBox>
+
+    <stylesheets>
+          <URL value="@style.css"/>
+     </stylesheets>
+</VBox>
